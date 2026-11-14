@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en" data-ev="0" id="top">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Siddhant Singh | Machine learning for financial risk</title>
+<meta name="description" content="Final-year AI and data science student building machine-learning systems for financial risk. Also a photographer, as sidxposure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+  try {
+    var saved = localStorage.getItem('ev');
+    if (saved !== null) document.documentElement.dataset.ev = saved;
+    else if (matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.dataset.ev = '-2';
+  } catch (e) {}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="wrap top">
+  <nav aria-label="Sections">
+    <a href="#projects">Projects</a>
+    <a href="#photography">Photography</a>
+    <a href="#background">Background</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="resume.pdf">Résumé (PDF)</a>
+</header>
+
+<main id="main">
+
+  <section class="wrap hero">
+    <h1>Siddhant<br>Singh</h1>
+    <div class="hero-row">
+      <p class="lede">Final-year AI and data science student at RAIT, Navi Mumbai. I build machine-learning systems that measure risk exposure for banks and markets. The other kind of exposure I handle with a camera, as sidxposure.</p>
+      <div class="meter">
+        <div class="meter-head">
+          <label for="ev">Exposure</label>
+          <output id="ev-note" for="ev">Metered</output>
+        </div>
+        <input id="ev" type="range" min="-2" max="2" step="1" value="0">
+        <div class="stops" aria-hidden="true">
+          <span>−2</span><span>−1</span><span>0</span><span>+1</span><span>+2</span>
+        </div>
+        <p class="meter-hint">Drag to set this page's exposure.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="projects">
+    <h2>Projects</h2>
+
+    <article class="project">
+      <div>
+        <h3>AML/CFT transaction flagging system</h3>
+        <p class="when">January to March 2026</p>
+        <p>Monitors transactions for money laundering and terrorism financing on IBM's synthetic dataset of more than five million transfers. A random forest with a tuned decision threshold does the flagging, using features drawn from FATF typologies: cross-currency hops, round amounts and transaction velocity. Flagged cases become suspicious transaction reports graded high, medium or low under the FATF Recommendations and the PMLA 2002, with a Plotly dashboard for compliance review.</p>
+        <p class="stack">Python, scikit-learn, pandas, SMOTE, Plotly</p>
+        <p><a href="https://github.com/siddhant9121">View code on GitHub</a></p>
+      </div>
+      <ul class="facts">
+        <li><strong>77%</strong> recall, when only 0.1% of transactions are laundering</li>
+        <li><strong>5M+</strong> transactions scored</li>
+        <li><strong>24,994</strong> high-risk alerts surfaced</li>
+      </ul>
+    </article>
+
+    <article class="project">
+      <div>
+        <h3>DAPM: asymmetric beta analytics engine</h3>
+        <p class="when">April to June 2026</p>
+        <p>An implementation of the dichotomous asset pricing model from Zou (2005). It estimates separate betas for rising and falling markets, which shows the asymmetry a single CAPM beta averages away. A screening and backtesting engine ranks stocks by that asymmetry, served through FastAPI with a PySide6 desktop client that pulls prices from yfinance.</p>
+        <p class="stack">Python, NumPy, SciPy, FastAPI, PySide6</p>
+        <p><a href="https://github.com/siddhant9121">View code on GitHub</a></p>
+      </div>
+      <ul class="facts">
+        <li><strong>43.9%</strong> lower pricing error than classical CAPM</li>
+        <li><strong>p = 0.0059</strong> on a Wilcoxon signed-rank test across 31 stocks</li>
+        <li><strong>0.71</strong> Sharpe ratio and 11.7% annualised return in a long-short backtest, 2021 to 2024</li>
+      </ul>
+    </article>
+
+    <article class="project">
+      <div>
+        <h3>Banking AI document intelligence platform</h3>
+        <p class="when">July 2026 to present</p>
+        <p>Reads banking and KYC documents and pulls out the fields a reviewer would otherwise type in by hand. The full machine-learning lifecycle is built around it: experiment tracking, model versioning, CI/CD, containerised deployment, and a feedback loop from human reviewers.</p>
+        <p class="stack">Python, BERT, MLflow, DVC, Jenkins, GitHub Actions, FastAPI, Docker</p>
+        <p><a href="https://github.com/siddhant9121">View code on GitHub</a></p>
+      </div>
+      <ol class="facts">
+        <li><strong>OCR</strong> turns scanned pages into text</li>
+        <li><strong>Classification</strong> sorts each document by type</li>
+        <li><strong>Extraction</strong> uses BERT to pull out the named fields</li>
+        <li><strong>Review</strong> sends people's corrections back into training</li>
+      </ol>
+    </article>
+  </section>
+
+  <section class="wrap" id="photography">
+    <h2>Photography</h2>
+    <p class="intro">I shoot as sidxposure. These are a few frames; the rest are on <a href="https://www.instagram.com/sidxposure/">Instagram</a>.</p>
+    <div class="sheet" id="sheet"></div>
+    <noscript><p>Photos need JavaScript to load. You can see them all on <a href="https://www.instagram.com/sidxposure/">Instagram</a>.</p></noscript>
+  </section>
+
+  <section class="wrap" id="background">
+    <h2>Background</h2>
+    <div class="cols">
+      <div>
+        <h3>Skills</h3>
+        <dl class="skills">
+          <div><dt>Languages</dt><dd>Python, SQL, Java, JavaScript, TypeScript</dd></div>
+          <div><dt>Machine learning</dt><dd>scikit-learn, pandas, NumPy, anomaly detection, predictive modelling</dd></div>
+          <div><dt>Statistics</dt><dd>Regression analysis, hypothesis testing, statistical validation</dd></div>
+          <div><dt>Analytics</dt><dd>Excel, Plotly, data visualisation</dd></div>
+          <div><dt>Web</dt><dd>React, Vite, HTML, CSS, FastAPI, REST APIs</dd></div>
+          <div><dt>MLOps</dt><dd>Git, GitHub, Docker, MLflow, DVC, Jenkins, GitHub Actions</dd></div>
+        </dl>
+      </div>
+      <div>
+        <h3>Education</h3>
+        <ul class="plain">
+          <li><strong>B.Tech in Computer Engineering</strong>, major in AI and Data Science<br>Ramrao Adik Institute of Technology, D.Y. Patil Deemed University<br><span class="when">2023 to 2027, CGPA 7.59 out of 10</span></li>
+          <li><strong>HSC</strong>, Ramniranjan Jhunjhunwala College<br><span class="when">2023</span></li>
+          <li><strong>ICSE</strong>, Presidency School<br><span class="when">2021</span></li>
+        </ul>
+
+        <h3>Certificates and activities</h3>
+        <ul class="plain">
+          <li><strong>IBM</strong> Data Analysis with Python</li>
+          <li><strong>IBM</strong> Data Visualization with Python</li>
+          <li><strong>Goldman Sachs risk management job simulation</strong> on Forage<br><span class="when">June 2026</span></li>
+          <li><strong>Photo Circle, RAIT</strong>, member covering college events<br><span class="when">July 2025 to July 2026</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="contact">
+    <h2>Contact</h2>
+    <p class="intro">Open to machine learning, data science and risk analytics roles from 2027.</p>
+    <p class="email">
+      <a href="mailto:siddhant.singhumesh@gmail.com">siddhant.singhumesh@gmail.com</a>
+      <button type="button" id="copy" data-email="siddhant.singhumesh@gmail.com">Copy email</button>
+    </p>
+    <ul class="links">
+      <li><a href="https://www.linkedin.com/in/singhsiddhant26">LinkedIn</a></li>
+      <li><a href="https://github.com/siddhant9121">GitHub</a></li>
+      <li><a href="https://www.instagram.com/sidxposure/">Instagram</a></li>
+      <li><a href="resume.pdf">Résumé (PDF)</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="wrap foot">
+  <p>© 2026 Siddhant Umesh Singh</p>
+  <p><a href="#top">Back to top</a></p>
+</footer>
+
+<dialog id="viewer" aria-label="Photo viewer">
+  <img id="viewer-img" src="" alt="">
+  <form method="dialog"><button>Close</button></form>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
